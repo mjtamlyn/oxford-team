@@ -15,17 +15,15 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="style/cerulean-bootstrap.css">
+  <link rel="stylesheet" href="/static/style/cerulean-bootstrap.css">
   <style>
       body {padding-top: 80px}
   </style>
 
   <!--script src="scripts/libs/modernizr-2.5.3.min.js"></script-->
 
-  <!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script src="https://raw.github.com/flesler/jquery.scrollTo/2815bc28a7321db204fe5195a39ce1b2abacb5db/jquery.scrollTo.js"></script>
-  <script src="https://raw.github.com/flesler/jquery.localScroll/9c4814d57e00884dc0a60c0adf1fd4dbef926c03/jquery.localScroll.js"></script>
-  <script src="scripts/main.js"></script-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="/static/js/bootstrap.ajax.js"></script>
 
 </head>
 
@@ -40,7 +38,7 @@
     <div class="container">
         <div class="hero-unit">
             <h1>The Oxford Team Tournament</h1>
-            <h2>An exciting new shoot coming January 2013</h2>
+            <h2>An exciting new shoot coming February 2013</h2>
         </div>
         <div class="row">
             <div class="span6">
@@ -49,10 +47,10 @@
             <div class="span6">
                 <div class="well">
                     <h3>Let me know when entries open</h3>
-                    <form class="form-inline">
+                    <form class="form-inline ajax" action="/" method="post">
                         <div class="input-prepend">
                             <span class="add-on"><i class="icon-envelope"></i></span>
-                            <input type="email" placeholder="Email" />
+                            <input type="email" name="email" placeholder="Email" />
                         </div>
                         <input class="btn btn-primary" type="submit" value="Go" />
                     </form>
@@ -61,13 +59,12 @@
         </div>
         <div class="row">
             <div class="span7">
-                <p>The competition is open to teams of three archers, either all recurve or all compound. The ranking round is a normal FITA 18, shot on 3 spot faces to record status timings. The matches which follow consist of 24 arrows per team shot over 4 ends of 2 minutes each. Highest number of hits wins. The matches are shot on Beiter Hit Miss targets, 50mm for recurves and 30mm for compounds. These targets are a great spectacle, and hugely fun to shoot at. For an example of what they're like, check out the final of the British Universities Team Championships 2012 <a href="http://www.youtube.com/watch?v=Dn3cakiasdk&t=4m15s">on YouTube</a>.</p>
-                <p>Teams must represent something, for example a club, university, alumni group, shop team or family. National teams and scratch teams of friends are not permitted. Acceptance of entry is at the discretion of the tournament committee.</p>
+                <p>The competition is open to teams of three archers, either all recurve or all compound. The ranking round is a normal FITA 18, shot on 3 spot faces. The matches which follow are shot on Beiter Hit-Miss targets. Each match consists of 24 arrows per team shot over 4 ends of 2 minutes each, highest number of hits wins. These targets are a great spectacle, and huge fun to shoot at. For an example of what they're like, check out the final of the British Universities Team Championships 2012 <a href="http://www.youtube.com/watch?v=Dn3cakiasdk&t=4m15s">on YouTube</a>.</p>
             </div>
             <div class="span5">
                 <dl class="dl-horizontal">
                     <dt>Date</dt>
-                        <dd>Saturday 12th January 2013</dd>
+                        <dd>Sunday 3rd January 2013</dd>
                     <dt>Time</dt>
                         <dd>Assembly at 8.30am</dd>
                     <dt>Venue</dt>
@@ -79,8 +76,6 @@
                                 OX14 3PJ
                             </address>
                         </dd>
-                    <dt>Chief of Judges</dt>
-                        <dd>Graham Potts</dd>
                 </dl>
             </div>
         </div>
