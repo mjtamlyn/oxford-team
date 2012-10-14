@@ -1,6 +1,7 @@
 # Django settings for oxford_team project.
 import os
 
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 import dj_database_url
 
 
@@ -38,6 +39,9 @@ STATICFILES_FINDERS = (
 
 TEMPLATE_DEBUG = DEBUG
 TEMPLATE_DIRS = (os.path.join(DIRNAME, 'templates'),)
+TEMPLATE_CONTEXT_PROCESSORS += (
+    'django.core.context_processors.request',
+)
 
 ROOT_URLCONF = 'oxford_team.urls'
 SECRET_KEY = 'o$-hdw5%tq@ijxs9&r3*$y57v8b!wlfjadus(2k&a4s8qiu'
@@ -47,6 +51,9 @@ WSGI_APPLICATION = 'oxford_team.wsgi.application'
 INSTALLED_APPS = (
     'oxford_team',
 
+    'socialregistration',
+    'socialregistration.contrib.facebook',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -55,6 +62,15 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
 )
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'socialregistration.contrib.facebook.auth.FacebookAuth',
+)
+LOGIN_REDIRECT_URL = '/'
+
+FACEBOOK_APP_ID = os.environ.get('FACEBOOK_APP_ID')
+FACEBOOK_SECRET_KEY = os.environ.get('FACEBOOK_SECRET_KEY')
 
 LOGGING = {
     'version': 1,
