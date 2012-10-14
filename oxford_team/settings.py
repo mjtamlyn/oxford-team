@@ -53,6 +53,7 @@ INSTALLED_APPS = (
 
     'socialregistration',
     'socialregistration.contrib.facebook',
+    'south',
 
     'django.contrib.auth',
     'django.contrib.contenttypes',
